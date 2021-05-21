@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import { theme } from './theme'
 
 export default createGlobalStyle`
   * {
@@ -10,5 +11,6 @@ export default createGlobalStyle`
     max-width: 100vw;
     height: 100vh;
     font-family: 'KoHo', sans-serif;
+    color: ${theme.onyx};
   }
 `

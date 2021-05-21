@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Navbar from '../components/Layout/Navbar/Navbar'
 import Sidebar from '../components/Layout/Sidebar/Sidebar'
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Head>
@@ -14,8 +14,10 @@ export default function Home() {
       <Navbar/>
       <Sidebar/>
       <main>
-        
+        <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
       </main>
     </>
   )
 }
+
+export default Home
