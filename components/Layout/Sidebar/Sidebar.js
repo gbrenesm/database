@@ -12,7 +12,6 @@ const Sidebar = () => {
   return (
     <SidebarNav>
       <ul>
-        <li className={pathname === '/' ? 'active' : ''} ><HomeIcon className="icon"/>Inicio</li>
         <li></li>
       </ul>
     </SidebarNav>

@@ -2,8 +2,11 @@ import styled from 'styled-components'
 import { theme } from '../../../styles/theme'
 
 export const SidebarNav = styled.nav`
+  width: 180px;
+  height: calc(100vh - 60px);
   font-weight: 500;
   font-size: 18px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.08);
 
   ul {
     list-style: none;

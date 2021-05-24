@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <Nav>
       <div>
-        <WomenIcon className="icon"/>
+        {/* <WomenIcon className="icon"/> */}
       </div>
       <div>
         
