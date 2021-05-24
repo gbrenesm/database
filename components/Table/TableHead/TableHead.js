@@ -6,10 +6,10 @@ const TableHead = () => {
     <TableHeadContainer>
       <tr>
         <th>Nombre</th>
-        <th>Edad</th>
+        <th>Fecha</th>
         <th>Suceso</th>
         <th>Perpetrador</th>
-    </tr>
+      </tr>
     </TableHeadContainer>
   )
 }

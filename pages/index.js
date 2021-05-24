@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Navbar from '../components/Layout/Navbar/Navbar'
 import Sidebar from '../components/Layout/Sidebar/Sidebar'
+import Table from '../components/Table/Table'
 
 const Home = () => {
   return (
@@ -12,8 +12,9 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar/>
-      <Sidebar/>
+      {/* <Sidebar/> */}
       <main>
+        <Table/>
       </main>
     </>
   )
