@@ -12,7 +12,7 @@ const Navbar = () => {
         {/* <WomenIcon className="icon"/> */}
       </div>
       <div>
-        
+        <button>Agregar mujer</button>
       </div>
     </Nav>
   )
