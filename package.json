@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@svgr/webpack": "^5.5.0",
+    "apollo-boost": "^0.4.9",
     "apollo-server-micro": "^2.24.1",
     "mongoose": "^5.12.11",
     "next": "10.2.0",
