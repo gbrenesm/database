@@ -1,3 +1,3 @@
 const resolvers = []
 
-export const resolvers
+export default resolvers
