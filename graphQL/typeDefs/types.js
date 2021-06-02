@@ -13,7 +13,7 @@ const types = gql`
     who: String
     what: String
     description: String
-    records: [Records]
+    records: [Record]
   }
 
   type Record {
