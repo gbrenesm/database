@@ -10,6 +10,9 @@ const womanResolvers = {
       const woman = Woman.findById(id)
       return woman
     }
+  },
+  Mutation: {
+
   }
 }
 

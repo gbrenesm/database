@@ -1,9 +1,11 @@
 import types from './types'
 import queries from './queries'
+import mutations from './mutations'
 
 const typeDefs = [
   types,
-  queries
+  queries,
+  mutations
 ]
 
 export default typeDefs
