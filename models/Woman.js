@@ -9,7 +9,7 @@ const WomanSchema = new Schema({
   birthday: Date,
   death: Date,
   note: String,
-  events: Date,
+  eventsDay: Date,
   place: String,
   who: String,
   what: {

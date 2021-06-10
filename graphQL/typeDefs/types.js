@@ -8,7 +8,7 @@ const types = gql`
     birthday: String
     death: String
     note: String
-    events: String
+    eventsDay: String
     place: String
     who: String
     what: String
@@ -25,6 +25,19 @@ const types = gql`
     transcription: String
     file: String,
     url: String
+  }
+
+  input WomanInput {
+    name: String!
+    age: Int
+    birthday: String
+    death: String
+    note: String
+    eventsDay: String!
+    place: String
+    who: String
+    what: String!
+    description: String
   }
 `
 
