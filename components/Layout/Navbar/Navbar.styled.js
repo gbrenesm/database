@@ -9,13 +9,13 @@ export const Nav = styled.div`
   padding: 0 30px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.08);
 
-  button {
-    width: 130px;
-    height: 30px;
+  a {
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     color: white;
     background-color: ${theme.munsell};
     font-size: 15px;
+    text-decoration: none;
   }
 `

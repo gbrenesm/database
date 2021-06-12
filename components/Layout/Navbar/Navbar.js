@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 // Import styles
 import { Nav } from './Navbar.styled'
 
@@ -12,7 +14,7 @@ const Navbar = () => {
         {/* <WomenIcon className="icon"/> */}
       </div>
       <div>
-        <button>Agregar mujer</button>
+        <Link href="/add-woman"><a>Agregar mujer</a></Link>
       </div>
     </Nav>
   )
