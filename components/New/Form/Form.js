@@ -8,7 +8,7 @@ const FormComponent = () => {
         <label>Nombre:</label>
         <input type="text" id="name" name="name"/>
       </div>
-      <div>
+      <div className="dates-div">
         <div>
           <label>Fecha de nacimiento: </label>
           <input type="date" id="birthday" name="birthday"/>
@@ -18,7 +18,7 @@ const FormComponent = () => {
           <input type="date" id="death" name="death"/>
         </div>
       </div>
-      <div>
+      <div className="general-div">
         <div>
           <label>Fecha: </label>
           <input type="date" id="date" name="date"/>
@@ -32,7 +32,7 @@ const FormComponent = () => {
           <input type="text" id="place" name="place"/>
         </div>
       </div>
-      <div>
+      <div className="fact-div">
         <div>
           <label>Suceso: </label>
           <input type="text" id="what" name="what"/>
@@ -50,6 +50,7 @@ const FormComponent = () => {
         <label>Nota: </label>
         <textarea id="note" name="note"/>
       </div>
+      <button>Guardar</button>
     </Form>
   )
 }
