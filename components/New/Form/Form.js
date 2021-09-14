@@ -1,9 +1,22 @@
 import { useState } from 'react'
+import { gql, useMutation } from '@apollo/react-hooks'
 
 // Import styles
 import { Form } from './Form.styled'
 
+// GraphQL mutation
+const ADD_WOMAN = gql`
+  mutation addWoman($input: WomanInput!) {
+    addWoman(input: $input) {
+      name
+    }
+  }
+`
+
 const FormComponent = () => {
+
+  const [addWoman] = useMutation(ADD_WOMAN)
+
   const [name, setName] = useState('')
   const [birthday, setBirthday] = useState('')
   const [death, setDeath] = useState('')
@@ -15,15 +28,31 @@ const FormComponent = () => {
   const [description, setDescription] = useState('')
   const [note, setNote] = useState('')
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault()
-    console.log(name)
+    const woman = await addWoman({
+      variables: {
+        input: {
+          name,
+          birthday,
+          death,
+          date,
+          age,
+          place,
+          what,
+          who,
+          description,
+          note
+        }
+      }
+    })
+    console.log(woman)
   }
 
   return (
     <Form onSubmit={handleSubmit}>
       <div>
-        <label>Nombre:</label>
+        <label>Nombre:*</label>
         <input type="text" id="name" name="name" onChange={e => setName(e.target.value)} />
       </div>
       <div className="dates-div">
@@ -36,9 +65,10 @@ const FormComponent = () => {
           <input type="date" id="death" name="death" onChange={e => setDeath(e.target.value)} />
         </div>
       </div>
+      <h2>Datos del suceso</h2>
       <div className="general-div">
         <div>
-          <label>Fecha: </label>
+          <label>Fecha:*</label>
           <input type="date" id="date" name="date" onChange={e => setDate(e.target.value)} />
         </div>
         <div>
@@ -52,7 +82,7 @@ const FormComponent = () => {
       </div>
       <div className="fact-div">
         <div>
-          <label>Suceso: </label>
+          <label>Suceso:* </label>
           <input type="text" id="what" name="what" onChange={e => setWhat(e.target.value)} />
         </div>
         <div>

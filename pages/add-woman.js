@@ -10,6 +10,7 @@ const New = () => {
     <>
       <Navbar/>
       <NewPage>
+        <h1>Añadir nueva mujer</h1>
         <FormComponent/>
       </NewPage>
     </>

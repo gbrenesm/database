@@ -11,16 +11,10 @@ import WomenIcon from '../../../assets/icons/mujer.svg'
 const Navbar = () => {
   const router = useRouter()
   const path = router.pathname
-  console.log(path)
+
   return (
     <Nav>
-      <div>
-        {/* <WomenIcon className="icon"/> */}
-      </div>
-      {path !== '/add-woman' &&
-      <div>
-        <Link href="/add-woman"><a>Agregar mujer</a></Link>
-      </div>}
+      <h1>LAS MUJERES INVISIBLES DE MÉXICO</h1>
     </Nav>
   )
 }

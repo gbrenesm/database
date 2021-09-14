@@ -7,15 +7,11 @@ export const Nav = styled.div`
   justify-content: flex-end;
   height: 60px;
   padding: 0 30px;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.08);
+  background-color: ${theme.purple};
+  background: linear-gradient(90deg, ${theme.red} 21%, ${theme.purple} 74%);
 
-  a {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+  h1 {
     color: white;
-    background-color: ${theme.munsell};
-    font-size: 15px;
-    text-decoration: none;
+    font-size: 20px;
   }
 `

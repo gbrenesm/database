@@ -10,7 +10,7 @@ export default createGlobalStyle`
   body {
     max-width: 100vw;
     height: 100vh;
-    font-family: 'KoHo', sans-serif;
-    color: ${theme.onyx};
+    /* font-family: 'KoHo', sans-serif; */
+    font-family: 'Open Sans', sans-serif;
   }
 `
