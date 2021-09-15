@@ -8,5 +8,5 @@ export const AddButton = styled.button`
   background-color: ${colors.red};
   border: none;
   border-radius: ${constantes.borderRadius};
-  font: 15px 'Open Sans', sans-serif;
+  font: 16px 'Open Sans', sans-serif;
 `

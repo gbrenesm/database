@@ -8,7 +8,7 @@ export const SearchcContainer = styled.div`
   align-items: center;
   border: 1px solid ${colors.gray};
   border-radius: ${constantes.borderRadius};
-  padding-right: 5px;
+  padding: 3px 5px;
   .icon {
     width: 16px;
   }
@@ -19,5 +19,7 @@ export const Searchinput = styled.input`
   height: 30px;
   border: none;
   font: 15px 'Open Sans', sans-serif;
-  
+  :focus {
+    outline: none;
+  }
 `

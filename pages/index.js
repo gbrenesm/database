@@ -1,7 +1,7 @@
 import Head from 'next/head'
 // Import components
 import Navbar from '../components/Layout/Navbar/Navbar'
-import Table from '../components/Table/Table'
+import Table from '../components/Home/Table/Table'
 import Searchbar from '../components/Home/Search/Searchbar'
 import Button from '../components/Home/Button/Button'
 // Import styles
