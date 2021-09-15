@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { theme } from '../../../styles/theme';
+import { colors } from '../../../styles/colors';
 
 export const NewPage = styled.main`
   width: 75%;
@@ -8,7 +8,7 @@ export const NewPage = styled.main`
   h1,
   h2 {
     margin-bottom: 15px;
-    color: ${theme.munsell};
+    color: ${colors.munsell};
   }
 
   h1 {

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { theme } from '../../../styles/theme'
+import { colors } from '../../../styles/theme'
 
 export const Form = styled.form`
   display: flex;
@@ -13,7 +13,7 @@ export const Form = styled.form`
   input,
   textarea {
     font: 16px 'KoHo', sans-serif;
-    border: 1px solid ${theme.onyx};
+    border: 1px solid ${colors.onyx};
     border-radius: 6px;
     padding: 5px 10px; 
   }
@@ -72,7 +72,7 @@ export const Form = styled.form`
     margin-top: 20px;
     align-self: flex-end;
     color: white;
-    background-color: ${theme.munsell};
+    background-color: ${colors.munsell};
     font-size: 15px;
   }
 `

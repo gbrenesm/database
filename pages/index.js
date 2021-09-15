@@ -1,6 +1,10 @@
 import Head from 'next/head'
+// Import components
 import Navbar from '../components/Layout/Navbar/Navbar'
 import Table from '../components/Table/Table'
+import Searchbar from '../components/Searchbar/Searchbar'
+// Import styles
+import { Main } from '../styles/Home.styled'
 
 const Home = () => {
   return (
@@ -11,9 +15,10 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar/>
-      <main>
+      <Main>
+        <Searchbar/>
         <Table/>
-      </main>
+      </Main>
     </>
   )
 }
