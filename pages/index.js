@@ -2,7 +2,8 @@ import Head from 'next/head'
 // Import components
 import Navbar from '../components/Layout/Navbar/Navbar'
 import Table from '../components/Table/Table'
-import Searchbar from '../components/Searchbar/Searchbar'
+import Searchbar from '../components/Home/Search/Searchbar'
+import Button from '../components/Home/Button/Button'
 // Import styles
 import { Main } from '../styles/Home.styled'
 
@@ -16,7 +17,10 @@ const Home = () => {
       </Head>
       <Navbar/>
       <Main>
-        <Searchbar/>
+        <div> 
+          <Searchbar/>
+          <Button/>
+        </div>
         <Table/>
       </Main>
     </>

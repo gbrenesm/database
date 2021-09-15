@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../styles/theme'
+import { colors, constantes } from '../../../styles/theme'
 
 export const SearchcContainer = styled.div`
   width: 40%;
@@ -7,7 +7,7 @@ export const SearchcContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   border: 1px solid ${colors.gray};
-  border-radius: 4px;
+  border-radius: ${constantes.borderRadius};
   padding-right: 5px;
   .icon {
     width: 16px;

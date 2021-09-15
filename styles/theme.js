@@ -7,3 +7,7 @@ export const colors = {
   blue: '#63BBD9',
   gray: '#b8b9bb'
 }
+
+export const constantes = {
+  borderRadius: '4px'
+}
