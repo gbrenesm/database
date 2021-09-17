@@ -19,6 +19,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="es">
         <Head>
+          <title>Mujeres insibles | Editor</title>
           <link rel="icon" href="/favicon.ico"/>
           {this.props.styleTags}
           <link rel="preconnect" href="https://fonts.googleapis.com"/>

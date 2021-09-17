@@ -11,7 +11,7 @@ export const TableHeadContainer = styled.thead`
   }
 
   .icon {
-    width: 10px;
+    width: 11px;
     color: ${colors.yellow}
   }
 `

@@ -6,7 +6,7 @@ export const SearchcContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid ${colors.gray};
+  border: 1px solid ${colors.grayDark};
   border-radius: ${constantes.borderRadius};
   padding: 3px 5px;
   .icon {

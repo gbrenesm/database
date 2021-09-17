@@ -5,7 +5,8 @@ export const colors = {
   red: '#AE435B',
   yellow: '#F3A63A',
   blue: '#63BBD9',
-  gray: '#b8b9bb'
+  gray: '#EEEFF3',
+  grayDark: '#8F8E8E'
 }
 
 export const constantes = {
