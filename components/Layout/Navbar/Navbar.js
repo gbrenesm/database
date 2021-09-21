@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <Nav>
-      <h1>LAS MUJERES INVISIBLES DE MÉXICO</h1>
+      <Link href="/"><a><h1>LAS MUJERES INVISIBLES DE MÉXICO</h1></a></Link>
     </Nav>
   )
 }

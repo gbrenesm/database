@@ -2,9 +2,8 @@ import styled from 'styled-components'
 import { colors } from '../../../../styles/theme'
 
 export const TableBodyContainer = styled.tbody`
-  font-size: 17px;
-  font-weight: 300;
   tr {
+    font: 300 17px 'Poppins', sans-serif;
     :nth-child(even) {
       background-color: ${colors.gray};
     }

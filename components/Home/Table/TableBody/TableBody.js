@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import { gql, useQuery } from '@apollo/react-hooks'
 import { convertDate } from '../../../../utils/convertDate'
 
@@ -19,16 +20,22 @@ const GET_WOMEN = gql`
 
 const TableBody = () => {
   const { data, loading } = useQuery(GET_WOMEN)
-  if (!loading) {
-    data.getWomen.map(woman => {
-      woman.eventsDay = convertDate(new Date(Number(woman.eventsDay)).toISOString().slice(0, 10))
-    })
-  }
-  if (loading) return (<tbody><tr><td>Cargando</td></tr></tbody>)
+  const [womenData, setWomenData] = useState(null)
+
+  useEffect(() => {
+    if (!loading && data.getWomen.length) {
+      // data.getWomen.map(woman => {
+      //   const date = new Date(Number(woman.eventsDay))
+      //   woman.eventsDay = convertDate(date?.toISOString())
+      // })
+      setWomenData(data.getWomen)
+    }
+  }, [data, loading])
+  // if (loading) return (<tbody><tr><td>Cargando</td></tr></tbody>)
 
   return (
     <TableBodyContainer>
-      {data.getWomen.map(woman => 
+      {womenData?.map(woman => 
         <tr key={woman._id}>
           <td>{woman.name}</td>
           <td>{woman.eventsDay}</td>

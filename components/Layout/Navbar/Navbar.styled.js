@@ -14,4 +14,8 @@ export const Nav = styled.div`
     color: white;
     font-size: 20px;
   }
+
+  a {
+    text-decoration: none;
+  }
 `

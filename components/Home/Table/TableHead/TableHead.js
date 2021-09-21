@@ -9,9 +9,9 @@ const TableHead = () => {
     <TableHeadContainer>
       <tr>
         <th>Nombre</th>
-        <th>Fecha <FontAwesomeIcon icon={faFilter} className="icon"/></th>
-        <th>Lugar <FontAwesomeIcon icon={faFilter} className="icon"/></th>
-        <th>Crimen <FontAwesomeIcon icon={faFilter} className="icon"/></th>
+        <th>Fecha&nbsp; <FontAwesomeIcon icon={faFilter} className="icon"/></th>
+        <th>Lugar&nbsp; <FontAwesomeIcon icon={faFilter} className="icon"/></th>
+        <th>Crimen&nbsp; <FontAwesomeIcon icon={faFilter} className="icon"/></th>
       </tr>
     </TableHeadContainer>
   )
