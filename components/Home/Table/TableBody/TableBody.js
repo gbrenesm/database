@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { gql, useQuery } from '@apollo/react-hooks'
 import { convertDate } from '../../../../utils/convertDate'
@@ -37,7 +38,7 @@ const TableBody = () => {
     <TableBodyContainer>
       {womenData?.map(woman => 
         <tr key={woman._id}>
-          <td>{woman.name}</td>
+          <td><Link href={`/detalles-mujer/${woman._id}`}><a>{woman.name}</a></Link></td>
           <td>{woman.eventsDay}</td>
           <td>{woman.place}</td>
           <td>{woman.what}</td>
