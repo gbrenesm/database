@@ -4,7 +4,7 @@ import Searchbar from '../components/Home/Search/Searchbar'
 import Button from '../components/Home/Button/Button'
 
 // Import styles
-import { Main } from '../styles/Home.styled'
+import { Main } from '../styles/Pages.styled'
 
 
 const Home = () => {
