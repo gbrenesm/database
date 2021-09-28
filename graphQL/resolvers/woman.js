@@ -1,6 +1,11 @@
 import Woman from '../../models/Woman'
+import Record from '../..//models/Record'
 
 const womanResolvers = {
+  Woman: {
+
+  },
+
   // Read
   Query: {
     getWomen: async () => {
@@ -8,7 +13,7 @@ const womanResolvers = {
       return women
     },
     getWomanDetail: async (_, { id }) => {
-      const woman = await Woman.findById(id)
+      const woman = await Woman.findById(id).populate({ path: 'records'})
       return woman
     }
   },

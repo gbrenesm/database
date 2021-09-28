@@ -27,6 +27,11 @@ const types = gql`
     url: String
   }
 
+  type User {
+    name: String
+    email: String
+  }
+
   input WomanInput {
     name: String!
     age: Int

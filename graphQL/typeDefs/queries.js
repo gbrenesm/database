@@ -4,6 +4,7 @@ const queries = gql`
   type Query { 
     getWomen: [Woman]
     getWomanDetail(id: ID!): Woman
+    
   }
 `
 

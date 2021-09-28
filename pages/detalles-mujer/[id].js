@@ -22,7 +22,10 @@ const GET_WOMAN = gql`
       what,
       who,
       description,
-      note
+      note,
+      records {
+        title
+      }
     }
   }
 `

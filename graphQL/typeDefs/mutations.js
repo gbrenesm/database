@@ -6,6 +6,9 @@ const mutations = gql`
     addWoman(input: WomanInput!) : Woman
     editWoman(id: ID!, input: WomanInput) : Woman
     deleteWoman(id: ID!): String
+
+    ### User ###
+    addUser: String
   }
 `
 export default mutations

@@ -13,7 +13,7 @@ export const GeneralInfo = styled.main`
 
   hr {
     color: ${colors.purple};
-    width: 60%;
+    width: 70%;
     border: 3px solid ${colors.purple};
     border-radius: 2px;
     margin-top: 6px;
