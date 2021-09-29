@@ -8,7 +8,7 @@ const mutations = gql`
     deleteWoman(id: ID!): String
 
     ### User ###
-    addUser: String
+    addUser(input: UserInput): String
   }
 `
 export default mutations

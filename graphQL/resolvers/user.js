@@ -7,7 +7,13 @@ const userResolvers = {
   },
   Mutation: {
     // Create
-    addUser: () => {
+    addUser: async (_, { input }) => {
+      const { name, email } = input
+      // Check if ther's already a user with the same email
+      const existingUser = await User.findOne({ email })
+      if (existingUser) throw new Error('El usuario ya está registrado')
+
+      const user = await User
       return 'Creando usuario...'
     }
     // Update

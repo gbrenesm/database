@@ -44,6 +44,12 @@ const types = gql`
     what: String!
     description: String
   }
+
+  input UserInput {
+    name: String!
+    email: String!
+    password: String!
+  }
 `
 
 export default types
