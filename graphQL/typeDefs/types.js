@@ -28,8 +28,13 @@ const types = gql`
   }
 
   type User {
+    _id: ID!
     name: String
     email: String
+  }
+
+  type Token {
+    token: String
   }
 
   input WomanInput {
@@ -46,7 +51,7 @@ const types = gql`
   }
 
   input UserInput {
-    name: String!
+    name: String
     email: String!
     password: String!
   }

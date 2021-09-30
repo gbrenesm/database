@@ -5,6 +5,8 @@ const queries = gql`
     getWomen: [Woman]
     getWomanDetail(id: ID!): Woman
     
+    ### User ###
+    getUser(token: String!) : User
   }
 `
 
