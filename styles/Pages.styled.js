@@ -11,7 +11,7 @@ export const Main = styled.main`
   }
 `
 
-export const Detail = styled.div`
-  margin: 20px auto 0;
+export const Page = styled.div`
+  margin: 30px auto 0;
   width: 90%;
 `

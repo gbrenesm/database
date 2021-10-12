@@ -1,8 +1,19 @@
+// Import components
+import Title from "../components/Layout/Title/Title"
+
+// import styles
+import { Page } from "../styles/Pages.styled"
+
 const AddWoaman = () => {
   return (
-    <div>
-      Aquí irá el formulario para añadir una nueva mujer
-    </div>
+    <Page>
+      <Title
+        title='Añadir nueva mujer'
+      />
+      <form>
+        <label>Nombre: </label>
+      </form>
+    </Page>
   )
 }
 

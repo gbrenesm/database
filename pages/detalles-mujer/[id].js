@@ -6,7 +6,7 @@ import { gql, useQuery } from '@apollo/react-hooks'
 import General from '../../components/Detail/General/General'
 
 // Import styles
-import { Detail } from '../../styles/Pages.styled'
+import { Page } from '../../styles/Pages.styled'
 
 // GraphQL Querys
 const GET_WOMAN = gql`
@@ -43,10 +43,10 @@ const DetailPage = () => {
 
   if (loading) return <p>Cargando...</p>
   return (
-    <Detail>
+    <Page>
       <General
         woman={data?.getWomanDetail}/>
-    </Detail>
+    </Page>
   )
 }
 
