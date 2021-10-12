@@ -20,23 +20,12 @@ const womanResolvers = {
   Mutation: {
     // Create
     addWoman: async (_, { input }) => {
-      const { name, age, birthday, death, note,
-        eventsDay, place, who, what, description } = input
-      const woman = await Woman.create({
-        name, age, birthday, death, note,
-        eventsDay, place, who, what, description}
-      )
+      const woman = await Woman.create(input)
       return woman
     },
     // Update
     editWoman: async (_, { id, input }) => {
-      const { name, age, birthday, death, note,
-        eventsDay, place, who, what, description } = input
-      const woman = await Woman.findByIdAndUpdate(id, {
-        name, age, birthday, death, note,
-        eventsDay, place, who, what, description},
-        { new: true }
-      )
+      const woman = await Woman.findByIdAndUpdate(id, input, { new: true })
       return woman
     },
     // Delete

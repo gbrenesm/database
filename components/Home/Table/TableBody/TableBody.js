@@ -25,10 +25,10 @@ const TableBody = () => {
 
   useEffect(() => {
     if (!loading && data.getWomen.length) {
-      // data.getWomen.map(woman => {
-      //   const date = new Date(Number(woman.eventsDay))
-      //   woman.eventsDay = convertDate(date?.toISOString())
-      // })
+  //     // data.getWomen.map(woman => {
+  //     //   const date = new Date(Number(woman.eventsDay))
+  //     //   woman.eventsDay = convertDate(date?.toISOString())
+  //     // })
       setWomenData(data.getWomen)
     }
   }, [data, loading])

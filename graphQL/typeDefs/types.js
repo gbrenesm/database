@@ -2,7 +2,7 @@ import { gql } from 'apollo-boost'
 
 const types = gql`
   type Woman {
-    _id: ID
+    _id: ID!
     name: String
     age: Int
     birthday: String
@@ -17,6 +17,7 @@ const types = gql`
   }
 
   type Record {
+    _id: ID!
     title: String
     newspaper: String
     publication: String

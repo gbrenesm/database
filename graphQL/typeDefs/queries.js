@@ -1,7 +1,8 @@
 import { gql } from 'apollo-boost'
 
 const queries = gql`
-  type Query { 
+  type Query {
+    ### Woman ###
     getWomen: [Woman]
     getWomanDetail(id: ID!): Woman
     
