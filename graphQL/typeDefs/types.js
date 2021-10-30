@@ -8,10 +8,12 @@ const types = gql`
     birthday: String
     death: String
     note: String
-    eventsDay: String
+    eventsYear: Int
+    eventsMonth: Int
+    eventsDay: Int
     place: String
     who: String
-    what: String
+    crime: String
     description: String
     records: [Record]
   }
@@ -43,12 +45,14 @@ const types = gql`
     age: Int
     birthday: String
     death: String
-    note: String
-    eventsDay: String!
+    eventsYear: Int
+    eventsMonth: Int
+    eventsDay: Int
     place: String
     who: String
-    what: String!
+    crime: String!
     description: String
+    note: String
   }
 
   input UserInput {

@@ -14,3 +14,8 @@ export const TitleHeader = styled.div`
     margin-top: 6px;
   }
 `
+
+export const Title2 = styled.h2`
+  font: bold 24px 'Poppins', sans-serif;
+  margin-bottom: 10px;
+`

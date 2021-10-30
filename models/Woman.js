@@ -9,10 +9,12 @@ const WomanSchema = new Schema({
   birthday: Date,
   death: Date,
   note: String,
-  eventsDay: Date,
+  eventsYear: Number,
+  eventsMonth: Number,
+  eventsDay: Number,
   place: String,
   who: String,
-  what: {
+  crime: {
     type: String,
     required: true
   },
