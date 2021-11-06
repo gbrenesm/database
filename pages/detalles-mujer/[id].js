@@ -18,7 +18,6 @@ const GET_WOMAN = gql`
       birthday,
       death,
       place,
-      eventsDay,
       what,
       who,
       description,

@@ -1,10 +1,24 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
+import { gql, useMutation } from '@apollo/react-hooks'
+import { useRouter } from 'next/router'
 
 // Import styles
 import { Form } from './Form.styled'
 import { Title2 } from '../../Layout/Title/Title.styled'
 
+// GraphQL Querys
+import { ADD_WOMAN } from '../../../services/mutations'
+import { GET_WOMEN } from '../../../services/queries'
+
+
 const WomanForm = () => {
+  const router = useRouter()
+  const [ addWoman ] = useMutation(ADD_WOMAN, {
+    update(cache, { data: addWoman }) {
+      const {getWomen} = cache.readQuery()
+    }
+  })
+
   const [name, setName] = useState('')
   const [eventsDay, setEventsDay] = useState(0)
   const [eventsMonth, setEventsMonth] = useState(0)
@@ -18,9 +32,32 @@ const WomanForm = () => {
   const [note, setNote] = useState('')
   const [description, setDescription] = useState('')
 
-  const submitForm = (e) => {
+  const submitForm = async (e) => {
     e.preventDefault()
-    console.log(name, eventsDay, eventsMonth, eventsYear, place, who)
+
+    try {
+      const { data } = await addWoman({ 
+        variables: {
+          input: {
+            name,
+            eventsDay: Number(eventsDay),
+            eventsMonth: Number(eventsMonth),
+            eventsYear: Number(eventsYear),
+            age: Number(age),
+            place,
+            who,
+            crime,
+            birthday,
+            death,
+            note,
+            description
+          }
+        }
+      })
+      router.push('/')
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   return (
@@ -34,7 +71,7 @@ const WomanForm = () => {
           <Title2>Datos del crimen</Title2>
           <div className="input-container in-line">
             <label htmlFor="crime">Tipo de crimen:</label>
-            <select required onChange={e => setCrime(e.target.value)} name="crime" id="crime">
+            <select required defaultValue={""} onChange={e => setCrime(e.target.value)} name="crime" id="crime">
               <option value="" selected>Selecciona una opción</option>
               <option value="faminicidio">Feminicidio</option>
               <option value="intento de feminicidio">Intento de feminicidio</option>
