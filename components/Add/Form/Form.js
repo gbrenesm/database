@@ -14,6 +14,7 @@ import { GET_WOMEN } from '../../../services/queries'
 const WomanForm = () => {
   const router = useRouter()
   const [ addWoman ] = useMutation(ADD_WOMAN, {
+    // Update cache afeter add register
     update(cache, { data: { addWoman } }) {
       const { getWomen } = cache.readQuery({ query: GET_WOMEN })
       cache.writeQuery({
@@ -42,7 +43,7 @@ const WomanForm = () => {
     e.preventDefault()
 
     try {
-      const { data } = await addWoman({ 
+      await addWoman({
         variables: {
           input: {
             name,
@@ -96,9 +97,9 @@ const WomanForm = () => {
             <label htmlFor="year">año:</label>
             <input type="number" min="1500" max="2050" onChange={e => setEventsYear(e.target.value)} name="year" id="year"/>
             <label htmlFor="month">mes:</label>
-            <input type="number" min="1" max="31" onChange={e => setEventsDay(e.target.value)} name="month" id="month"/>
+            <input type="number" min="1" max="31" onChange={e => setEventsMonth(e.target.value)} name="month" id="month"/>
             <label htmlFor="day">día:</label>
-            <input type="number" min="1" max="12" onChange={e => setEventsMonth(e.target.value)} name="day" id="day" />
+            <input type="number" min="1" max="12" onChange={e => setEventsDay(e.target.value)} name="day" id="day" />
           </div>
           <div className="input-container in-line">
             <label htmlFor="place">Lugar:</label>
