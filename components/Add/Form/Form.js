@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { gql, useMutation } from '@apollo/react-hooks'
+import { useMutation } from '@apollo/react-hooks'
 import { useRouter } from 'next/router'
 
 // Import styles
@@ -14,8 +14,14 @@ import { GET_WOMEN } from '../../../services/queries'
 const WomanForm = () => {
   const router = useRouter()
   const [ addWoman ] = useMutation(ADD_WOMAN, {
-    update(cache, { data: addWoman }) {
-      const {getWomen} = cache.readQuery()
+    update(cache, { data: { addWoman } }) {
+      const { getWomen } = cache.readQuery({ query: GET_WOMEN })
+      cache.writeQuery({
+        query: GET_WOMEN,
+        data: {
+          getWomen: [...getWomen, addWoman]
+        }
+      })
     }
   })
 
@@ -73,7 +79,7 @@ const WomanForm = () => {
             <label htmlFor="crime">Tipo de crimen:</label>
             <select required defaultValue={""} onChange={e => setCrime(e.target.value)} name="crime" id="crime">
               <option value="" selected>Selecciona una opción</option>
-              <option value="faminicidio">Feminicidio</option>
+              <option value="feminicidio">Feminicidio</option>
               <option value="intento de feminicidio">Intento de feminicidio</option>
               <option value="violación">Violación</option>
               <option value="agresión">Agresión</option>

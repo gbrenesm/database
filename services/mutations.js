@@ -10,6 +10,12 @@ const ADD_WOMAN = gql`
       eventsYear,
       age,
       crime,
+      place,
+      who,
+      birthday,
+      death,
+      note,
+      description
   }
 }
 `
