@@ -20,11 +20,11 @@ const types = gql`
 
   type Record {
     _id: ID!
-    title: String
+    name: String
     newspaper: String
-    publication: String
+    publicationDate: String
     page: String
-    place: String
+    publicationPlace: String
     transcription: String
     file: String,
     url: String

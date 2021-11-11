@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
-import { gql, useQuery } from '@apollo/react-hooks'
+import { useQuery } from '@apollo/react-hooks'
 
 // Import components
 import General from '../../components/Detail/General/General'
@@ -8,33 +8,16 @@ import General from '../../components/Detail/General/General'
 // Import styles
 import { Page } from '../../styles/Pages.styled'
 
-// GraphQL Querys
-const GET_WOMAN = gql`
-  query getWomanDetail($id: ID!) {
-    getWomanDetail(id: $id) {
-      _id,
-      name,
-      age,
-      birthday,
-      death,
-      place,
-      what,
-      who,
-      description,
-      note,
-      records {
-        title
-      }
-    }
-  }
-`
+// Import query
+import { GET_WOMAN_DETAILS } from '../../services/queries'
+import Title from '../../components/Layout/Title/Title'
+
 
 const DetailPage = () => {
   const router = useRouter()
   const { id } = router.query
-  const [woman, setWoman] = useState(null)
 
-  const { data, loading } = useQuery(GET_WOMAN, {
+  const { data, loading } = useQuery(GET_WOMAN_DETAILS, {
     variables: {
       id
     }
@@ -43,6 +26,9 @@ const DetailPage = () => {
   if (loading) return <p>Cargando...</p>
   return (
     <Page>
+      <Title
+        title={data?.getWomanDetail.name}
+      />
       <General
         woman={data?.getWomanDetail}/>
     </Page>

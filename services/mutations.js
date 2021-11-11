@@ -1,6 +1,6 @@
 import { gql } from '@apollo/react-hooks'
 
-const ADD_WOMAN = gql`
+export const ADD_WOMAN = gql`
   mutation addWoman($input: WomanInput!) {
     addWoman(input: $input) {
       name,
@@ -19,7 +19,3 @@ const ADD_WOMAN = gql`
   }
 }
 `
-
-module.exports = {
-  ADD_WOMAN
-}

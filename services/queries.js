@@ -1,6 +1,6 @@
 import { gql } from '@apollo/react-hooks'
 
-const GET_WOMEN = gql`
+export const GET_WOMEN = gql`
   query getWomen {
     getWomen {
       _id,
@@ -19,7 +19,25 @@ const GET_WOMEN = gql`
     }
   }
 `
-
-module.exports = {
-  GET_WOMEN
-}
+export const GET_WOMAN_DETAILS = gql`
+  query getWomanDetail($id: ID!) {
+    getWomanDetail(id: $id) {
+      _id,
+      name,
+      age,
+      place,
+      eventsDay,
+      eventsMonth,
+      eventsYear,
+      crime,
+      birthday,
+      death,
+      note,
+      who,
+      description,
+      records {
+        name
+      }
+    }
+  }
+`

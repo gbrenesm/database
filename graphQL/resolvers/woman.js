@@ -14,6 +14,7 @@ const womanResolvers = {
     },
     getWomanDetail: async (_, { id }) => {
       const woman = await Woman.findById(id).populate({ path: 'records'})
+      console.log(woman)
       return woman
     }
   },
